@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-popup" id="newBookForm" style="display: none">
+        <form onsubmit="submitNewBook(); closeNewBookForm(); return false;" class="form-container">
+            <h1 class="form-header">New Book</h1>
+
+            <label for="text">Title</label>
+            <input id="title" type="text" placeholder="Book Title" name="title" required>
+            
+            <label for="author">Author</label>
+            <input id="author" type="text" placeholder="Author" name="author" required>
+
+            <label for="page-count">Page Count</label>
+            <input id="pageCount" type="number" placeholder="0" name="page-count">
+
+            <label for="hasRead">Have you read this?</label>
+            <input id="hasRead" type="checkbox" name="hasRead">
+
+            <button type="submit" class="btn">Add Book</button>
+            <button type="button" class="btn cancel" onclick="closeNewBookForm()">Close</button>
+
+        </form>
+    </div>
+    <div class="main-container">
+        <div class="header">
+            <h1>LIBRARY</h1>
+        </div>
+        <div class="card-area">
+            <h2>MY BOOKS</h2>
+            <div class="card-container">
+                <div id="booksGrid">
+                </div>
+                <button type="button" id="addCardBtn" class="btn" onclick="openNewBookForm()">ADD BOOK</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div>JOE WEBER</div>
+        </div>
+    </div>
+</body>
+</html>

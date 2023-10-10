@@ -1,0 +1,140 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer,
+.card-area {
+    text-align: center;
+}
+
+body {
+    font: normal 12px Verdana, Arial, sans-serif;
+    background-color: grey;
+}
+
+/* xxxxxxxxxxxxxxxxx HEADER xxxxxxxxxxxxxxxxxxxx */
+
+.header {
+    background-color: rgb(186, 186, 186);
+}
+
+/* xxxxxxxxxxxxxxxxx CARD AREA xxxxxxxxxxxxxxxxxxxx */
+
+.card-area {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+#booksGrid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 30vh));
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30vh;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.card > div {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 10px;
+    padding-left: 10px;
+    justify-self: flex-end;
+}
+
+.card p:first-child {
+    display: flex;
+    flex-basis: 38px;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.card > p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+button {
+    background-color: rgb(174, 174, 174);
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+.btn-light-green {
+    background-color: rgb(172, 255, 172);
+}
+
+.btn-light-red {
+    background-color: rgb(252, 189, 189);
+}
+
+#addCardBtn {
+    margin: 20px;
+    font-size: larger;
+}
+
+
+/* xxxxxxxxxxxxx NEW CARD FORM xxxxxxxxxxxxx */
+
+.form-popup {
+    display: flex;
+    justify-content: center;
+    background-size: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(206, 206, 206);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 30px;
+}
+
+.form-container {
+    font-size: larger;
+    min-width: overflow;
+    min-height: overflow;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(6, 50px);
+    padding: 50px;
+    grid-gap: 20px 20px;
+}
+
+.form-header {
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.form-container > label {
+    text-align: right;
+    align-self: center;
+}
+
+/* xxxxxxxxxxxxxxxxx FOOTER xxxxxxxxxxxxxxxxxxxx */
+
+.footer {
+    display: flex;
+    background-color: rgb(186, 186, 186);
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+}
